@@ -13,7 +13,10 @@ public class CorsConfig {
 	public CorsFilter corsFilter() {
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		CorsConfiguration config = new CorsConfiguration();
-		config.addAllowedOrigin("http://jobnexus.in");
+		  config.addAllowedOrigin("http://www.jobnexus.in"); // Your production domain
+        config.addAllowedOrigin("http://localhost:3000"); // Your local development domain
+        config.addAllowedOrigin("https://www.jobnexus.in");
+        config.addAllowedOrigin("https://jobnexus.in");
 		
 		
 		// Adjust the origin as needed
