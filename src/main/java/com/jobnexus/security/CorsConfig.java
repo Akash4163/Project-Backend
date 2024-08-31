@@ -18,6 +18,8 @@ public class CorsConfig {
     //     config.addAllowedOrigin("https://www.jobnexus.in");
     //     config.addAllowedOrigin("https://jobnexus.in");
 		config.addAllowedOrigin("https://jobnexus.vercel.app");
+		 config.addAllowedOrigin("https://jobnexus-hnapebnb8-akashs-projects-eadcd1b0.vercel.app");
+        config.addAllowedOrigin("https://cozy-joy-production.up.railway.app"); // Railway domain
 		
 		
 		
