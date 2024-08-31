@@ -15,7 +15,9 @@ public class Application {
 
 	// Start Point
 	public static void main(String[] args) {
+		System.out.println("Hello"); 
 		SpringApplication.run(Application.class, args);
+		
 	}
 
 	@Bean
