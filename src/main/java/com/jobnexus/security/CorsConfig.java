@@ -17,7 +17,8 @@ public class CorsConfig {
         config.addAllowedOrigin("http://localhost:3000"); // Your local development domain
         config.addAllowedOrigin("https://www.jobnexus.in");
         config.addAllowedOrigin("https://jobnexus.in");
-		config.addAllowedOrigin("http://jobnexus.in");
+		config.addAllowedOrigin("https://jobnexus.vercel.app");
+		
 		
 		
 		// Adjust the origin as needed
