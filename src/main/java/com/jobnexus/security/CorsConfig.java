@@ -13,10 +13,10 @@ public class CorsConfig {
 	public CorsFilter corsFilter() {
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		CorsConfiguration config = new CorsConfiguration();
-		  // config.addAllowedOrigin("http://www.jobnexus.in"); // Your production domain
-    //     config.addAllowedOrigin("http://localhost:3000"); // Your local development domain
-    //     config.addAllowedOrigin("https://www.jobnexus.in");
-    //     config.addAllowedOrigin("https://jobnexus.in");
+		   config.addAllowedOrigin("http://www.jobnexus.in"); // Your production domain
+  config.addAllowedOrigin("http://localhost:3000"); // Your local development domain
+  config.addAllowedOrigin("https://www.jobnexus.in");
+        config.addAllowedOrigin("https://jobnexus.in");
 		config.addAllowedOrigin("https://jobnexus.vercel.app");
 		 config.addAllowedOrigin("https://jobnexus-hnapebnb8-akashs-projects-eadcd1b0.vercel.app");
         config.addAllowedOrigin("https://cozy-joy-production.up.railway.app"); // Railway domain
