@@ -9,24 +9,23 @@ import org.springframework.web.filter.CorsFilter;
 @Configuration
 public class CorsConfig {
 
-	@Bean
-	public CorsFilter corsFilter() {
-		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-		CorsConfiguration config = new CorsConfiguration();
-		   config.addAllowedOrigin("http://www.jobnexus.in"); // Your production domain
-  config.addAllowedOrigin("http://localhost:3000"); // Your local development domain
-  config.addAllowedOrigin("https://www.jobnexus.in");
-        config.addAllowedOrigin("https://jobnexus.in");
-		config.addAllowedOrigin("https://jobnexus.vercel.app");
-		 config.addAllowedOrigin("https://jobnexus-hnapebnb8-akashs-projects-eadcd1b0.vercel.app");
-        config.addAllowedOrigin("https://cozy-joy-production.up.railway.app"); // Railway domain
-		
-		
-		
-		// Adjust the origin as needed
-		config.addAllowedHeader("*");
-		config.addAllowedMethod("*");
-		source.registerCorsConfiguration("/**", config);
-		return new CorsFilter(source);
-	}
+    @Bean
+    public CorsFilter corsFilter() {
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        CorsConfiguration config = new CorsConfiguration();
+
+        // Allow specific origins
+        config.addAllowedOriginPattern("https://www.jobnexus.in");
+        config.addAllowedOriginPattern("https://jobnexus.in");
+        config.addAllowedOriginPattern("https://*.vercel.app"); // To cover all Vercel subdomains
+        config.addAllowedOriginPattern("https://*.railway.app"); // To cover all Railway subdomains
+        config.addAllowedOriginPattern("http://localhost:3000"); // Local development
+
+        // Allow all headers and methods
+        config.addAllowedHeader("*");
+        config.addAllowedMethod("*");
+
+        source.registerCorsConfiguration("/**", config);
+        return new CorsFilter(source);
+    }
 }
